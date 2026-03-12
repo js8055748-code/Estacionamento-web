@@ -1,0 +1,6 @@
+/* deixa todos os links do menu em branco puro */
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+

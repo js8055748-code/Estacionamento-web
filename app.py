@@ -20,6 +20,8 @@ from database import criar_tabelas
 
 
 app = Flask(__name__)
+app.config["DEBUG"] = True
+
 app.secret_key = "secret-estacionamento"  # troque em produção
 
 
