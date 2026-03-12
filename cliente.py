@@ -1,3 +1,17 @@
+import sqlite3
+import os
+
+
+DB_NAME = "estacionamento.db"
+
+
+def conectar():
+    caminho = os.path.join(os.path.dirname(__file__), DB_NAME)
+    conn = sqlite3.connect(caminho)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+
 class Clientes:
     @staticmethod
     def cadastrar(nome, cpf, placa, tipo, mensalista=0, valor_mensalidade=None):
